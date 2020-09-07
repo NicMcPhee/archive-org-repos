@@ -2,9 +2,11 @@
 const { request } = require("@octokit/request");
 const { createAppAuth } = require("@octokit/auth-app");
 
+const myToken = process.env.ARCHIVE_REPO_TOKEN;
+console.log(myToken)
 const authHeaders = request.defaults({
   headers: {
-    authorization: myToken,
+    authorization: `token: ${myToken}`,
   },
 });
 
@@ -66,7 +68,7 @@ async function archiveAllOrgRepos(org) {
   return archivedNames;
 }
 
-const archivedRepos = archiveAllOrgRepos('UMM-CSci-3403-Fall-2018');
+const archivedRepos = archiveAllOrgRepos('UMM-CSci-3601-F17');
 archivedRepos.then(repoNames => {
   console.log(repoNames);
 })
