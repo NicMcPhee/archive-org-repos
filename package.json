@@ -1,0 +1,16 @@
+{
+  "name": "archive-github-org",
+  "version": "1.0.0",
+  "description": "Tools to archive all the repositories in a GitHub organization.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nic McPhee",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/auth-app": "^2.4.15",
+    "@octokit/request": "^5.4.7",
+    "octokit": "^1.0.0-hello-world"
+  }
+}
